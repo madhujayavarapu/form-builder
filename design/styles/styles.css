@@ -1,0 +1,276 @@
+:root {
+    --bg: #fff;
+    --fg: #E9E9E9;
+    --fg-color: #000;
+    --side-bg: #F4F4F4;
+    --color: #333;
+    --primary: #1274CF;
+    --primary-color: #fff;
+    --danger: #CD0B0B;
+    --danger-color: #fff;
+    --sidebar-width: 250px;
+    --right-sidebar-width: 300px;
+    --secondary-color: #212121;
+    --medium-color: #969696;
+    --form-control-border: #DFEAF3;
+    --form-control-active-border: var(--primary);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.2rem;
+    width: 100%;
+    background: var(--bg);
+    color: var(--color);
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+/** ============== BUTTON ============== */
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    padding: .5rem .75rem;
+    margin: 0 .25rem;
+    background: var(--fg);
+    color: var(--fg-color);
+    border: 1px solid var(--fg);
+    border-radius: 4px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.btn--primary {
+    background: var(--primary);
+    color: var(--primary-color);
+    border-color: var(--primary);
+}
+.btn--outline-primary {
+    background: var(--primary-color);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    font-weight: bold;
+}
+.btn--danger {
+    background: var(--danger);
+    color: var(--danger-color);
+    border-color: var(--danger);
+}
+.btn--outline-danger {
+    background: var(--danger-color);
+    color: var(--danger);
+    border: 2px solid var(--danger);
+    font-weight: bold;
+}
+/** ====================== END OF BUTTON ================== */
+
+/** ====================== TABS ============================= */
+.tabs {
+    display: flex;
+    margin: .5rem 0;
+    justify-content: center;
+}
+.tabs .btn {
+    padding: .25rem .65rem;
+    font-weight: 400;
+    margin: 0 .25rem;
+    font-size: x-small;
+}
+.tabs .btn--outline-primary {
+    border-width: 1px;
+}
+.tabs__item {
+    padding: .5rem .75rem;
+    margin: 0 10px;
+    border: 1px solid var(--form-control-border);
+    border-radius: 4px;
+}
+/** ========================== END OF TABS ==================== */
+
+
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--side-bg);
+    height: 100%;
+}
+.preview {
+    flex: 1;
+    height: 100%;
+    padding: 20px 40px;
+}
+.field-options {
+    width: var(--right-sidebar-width);
+    height: 100%;
+    background: var(--side-bg);
+}
+
+
+/** =========== FIELDS SIDEBAR ================ */ 
+.sidebar__list {
+    padding: 0 .5rem;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+.sidebar__list-item {
+    padding: .75rem;
+    margin: .5rem 0;
+    background: var(--fg);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.sidebar__list-item .sidebar__list-item-title {
+    flex: 1;
+    font-size: 1rem;
+    margin: 0 5px;
+}
+.sidebar__list-item i {
+    font-size: 1.2rem;
+}
+.sidebar__list-item i.danger {
+    color: var(--danger);
+}
+.sidebar__list-item--active {
+    background: var(--primary);
+    color: var(--primary-color);
+}
+.sidebar__list-item--active i.danger {
+    color: var(--primary-color);
+}
+.sidebar__add-field-btn {
+    margin: 0 .5rem;
+    width: calc(100% - 1rem);
+}
+
+/** ========================== END OF SIDEBAR ============================ */
+
+
+/** ========================= FORM ============================== */
+.form__group,
+.form__radio-group,
+.form__checkbox-group {
+    margin-bottom: .5rem;
+    width: 100%;
+}
+.form__radio-group,
+.form__checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form__label {
+    color: var(--secondary-color);
+    font-size: 14px;
+    margin-bottom: .25rem;
+    display: block;
+}
+.form__control {
+    padding: .5rem;
+    border: 1px solid var(--form-control-border);
+    border-radius: 4px;
+    background: inherit;
+    margin-bottom: .25rem;
+    outline: none;
+    width: 100%;
+}
+.form__control:focus {
+    border: 1px solid var(--form-control-active-border);
+}
+input[type="radio"].form__control {
+    justify-content: flex-end;
+}
+.form__hint {
+    color: var(--medium-color);
+    font-size: 12px;
+}
+/** ========================= END OF FORM ============================== */
+
+/** ========================= FIELD OPTIONS ============================== */
+.field-options {
+    position: relative;
+}
+.field-options__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem .5rem 0;
+    max-height: 40px;
+}
+.field-options__header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+.field-options__header .btn--close {
+    padding: .25rem .5rem;
+    border-radius: 100%;
+    font-size: 1.2rem;
+    border: none
+}
+.tabs {
+    padding: .5rem;
+}
+.tab-content {
+    height: calc(100vh - 150px);
+    overflow: auto;
+    padding: .5rem;
+}
+
+.field-options__footer {
+    background: var(--fg);
+    color: var(--fg-color);
+    position: absolute;
+    bottom: 0;
+    padding: .5rem;
+    width: var(--right-sidebar-width);
+    display: flex;
+    justify-content: flex-end;
+    max-height: 50px;
+}
+/** ========================END OF FIELD OPTIONS ============================== */
+
+
+/** =========================== GRID ===================================== */
+.row {
+    width: 100%;
+    display: flex;
+}
+.col-12 {
+    margin: 0 5px;
+    flex: 1 1 100%;
+}
+.col-6 {
+    flex: 1 1 50%;
+    margin: 0 5px;
+}
+.col-4 {
+    flex: 1 1 33.33%
+    margin: 0 5px;
+}
+.col-3 {
+    flex: 1 1 25%;
+    margin: 0 5px;
+}
+/** =========================== END OF GRID ============================== */
+
+
+/** ========================== PREVIEW ================================== */
+/** ========================== END OF PREVIEW =============================== */

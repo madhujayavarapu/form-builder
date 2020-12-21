@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <ul class="sidebar__list">
+                <li class="sidebar__list-item sidebar__list-item--active">
+                    <i class='bx bx-layout'></i>
+                    <span class="sidebar__list-item-title">Field Name</span> 
+                    <i class='bx bx-minus-circle danger'></i>
+                </li>
+                <li class="sidebar__list-item">
+                    <i class='bx bx-layout'></i>
+                    <span class="sidebar__list-item-title">Field Name</span> 
+                    <i class='bx bx-minus-circle danger'></i>
+                </li>
+                <li class="sidebar__list-item">
+                    <i class='bx bx-layout'></i>
+                    <span class="sidebar__list-item-title">Field Name</span> 
+                    <i class='bx bx-minus-circle danger'></i>
+                </li>
+            </ul>
+            <button class="btn btn--outline-primary sidebar__add-field-btn">Add Field</button>
+        </aside>
+        <main class="preview"> 
+            <div class="row">
+                <div class="col-6">
+                    <div class="form__group">
+                        <label for="firstName" class="form__label">FirstName</label>
+                        <input type="text" class="form__control" name="firstName" id="firstName">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form__group">
+                        <label for="lastName" class="form__label">Last Name</label>
+                        <input type="text" class="form__control" name="lastName" id="lastName">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form__group">
+                        <label for="description" class="form__label">Description</label>
+                        <textarea class="form__control" name="description" id="description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside class="field-options">
+            <div class="field-options__header">
+                <h2>Field Type/Label</h2>
+                <button class="btn btn--outline-danger btn--close">
+                    &times;
+                </button>
+            </div>
+            <div class="tabs">
+                <button class="btn btn--primary">Properties</button>
+                <button class="btn btn--outline-primary">Data</button>
+                <button class="btn btn--outline-primary">Validations</button>
+                <button class="btn btn--outline-primary">Rules</button>
+                <!-- <li class="tabs__item">Properties</li>
+                <li class="tabs__item">Data</li>
+                <li class="tabs__item">Validations</li>
+                <li class="tabs__item">Rules</li> -->
+            </div>
+
+            <div class="tab-content">
+                <div class="form__group">
+                    <label for="label" class="form__label">Label</label>
+                    <input type="text" name="label" placeholder="label" id="label" class="form__control">
+                    <p class="form__hint">This is a required field.</p>
+                </div>
+                <div class="form__group">
+                    <label for="label" class="form__label">Label</label>
+                    <input type="text" name="label" placeholder="label" id="label" class="form__control">
+                    <p class="form__hint">This is a required field.</p>
+                </div>
+                <div class="form__group">
+                    <label for="label" class="form__label">Label</label>
+                    <input type="text" name="label" placeholder="label" id="label" class="form__control">
+                    <p class="form__hint">This is a required field.</p>
+                </div>
+                <div class="form__checkbox-group">
+                    <label for="display-label" class="form__label">Display Label</label>
+                    <input type="checkbox" name="display-label" id="display-label"/>
+                </div>
+                <div class="form__checkbox-group">
+                    <label for="hidden-input" class="form__label">Hidden</label>
+                    <input type="checkbox" name="hidden-input" id="hidden-input"/>
+                </div>
+                <div class="form__checkbox-group">
+                    <label for="Required" class="form__label">Display Label</label>
+                    <input type="checkbox" name="Required" id="Required"/>
+                </div>
+            </div>
+
+            <div class="field-options__footer">
+                <button class="btn btn--danger">Cancel</button>
+                <button class="btn btn--primary">Save</button>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
